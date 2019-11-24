@@ -16,9 +16,11 @@ app.get('/', function(req, res) {
 app.post('/order', async function(req, res) {
   try {
     await sendMail(req.body);
-    res.send('success');
+    return res
+      .status(200)
+      .json({ message: 'Order successfull. We will contact you shortly to confirm your order' });
   } catch ({ message: error }) {
-    res.send(error);
+    res.status(400).json({ message: 'Order was not successfull' });
   }
 });
 app.listen(port, function() {
