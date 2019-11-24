@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Smart Razor</title>
+    <link rel="shortcut icon" href="img/shaver4.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/toastr.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/fontawesome-free-5.11.2-web/css/all.min.css" />
+  </head>
+  <body>
+    <button
+      class="btn btn-sm btn-danger floating orders m-1"
+      type="button"
+      data-toggle="modal"
+      data-target="#my-modal"
+    >
+      Order Now
+    </button>
+    <nav class="navbar navbar-expand-sm navbar-light bg-dark fixed-top">
+      <a href="./index.html" class="navbar-brand">BRISBUY</a>
+      <button
+        class="navbar-toggler"
+        data-target="#my-nav"
+        data-toggle="collapse"
+        aria-controls="my-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="toggle"></span>
+        <span class="toggle"></span>
+        <span class="toggle"></span>
+      </button>
+      <div id="my-nav" class="collapse navbar-collapse">
+        <a class="navlinks features" href="#">Features</a>
+        <a class="navlinks orders" data-toggle="modal" data-target="#my-modal" href="#">Order Now</a>
+        <a class="navlinks contact" href="#">Contact Us</a>
+      </div>
+    </nav>
+    <section class="showcase">
+      <div class="carousel">
+        <div id="my-carousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100 slider-image" src="./img/shaver1.jpg" alt="image1" />
+              <div class="carousel-caption d-none d-md-block"></div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 slider-image" src="./img/shaver2.jpg" alt="image1" />
+              <div class="carousel-caption d-none d-md-block"></div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 slider-image" src="./img/shaver3.jpg" alt="image1" />
+              <div class="carousel-caption d-none d-md-block"></div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 slider-image" src="./img/shaver4.jpg" alt="image1" />
+              <div class="carousel-caption d-none d-md-block"></div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 slider-image" src="./img/shaver5.jpg" alt="image1" />
+              <div class="carousel-caption d-none d-md-block"></div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 slider-image" src="./img/shaver6.jpg" alt="image1" />
+              <div class="carousel-caption d-none d-md-block"></div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 slider-image" src="./img/shaver7.jpg" alt="image1" />
+              <div class="carousel-caption d-none d-md-block"></div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#my-carousel" data-slide="prev" role="button">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#my-carousel" data-slide="next" role="button">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <h3 class="text-danger text-center promo"><i> Promo! Promo !! Promo !!!</i></h3>
+      <div class="counter"></div>
+      <p class="text-center promo">
+        Get this <i>Amazing</i> Deal at up to <i class="text-danger">30%</i> discount!
+      </p>
+      <p class="text-center"><s class="text-danger"> <i><strong>&#8358;26,000</s> &#8358;18,500</strong></i></p>
+
+      <p class="text-center">Hurry and Place your orders while promo last</p>
+      <p class="text-center">
+        <button
+          class="btn btn-sm btn-danger"
+          type="button"
+          data-toggle="modal"
+          data-target="#my-modal"
+        >
+          Orders Now
+        </button>
+      </p>
+      <section class="features-section">
+        <div class="row">
+          <div class="col-md-6">
+            <video class="video" src="./videos/shaver.mp4" autoplay controls></video>
+            <img src="./img/shaver6.jpg" class="feature-img" alt="" />
+          </div>
+          <div class="col-md-6" id="features-section">
+            <h3 class="text-center">Features</h3>
+            <strong>
+              DESCRIPTION:
+            </strong>
+            <br />
+            <i>
+              Kemei KM-1000 5 in 1 Mini Portable Electric Shaver Rechargeable Razors Hair Clipper
+              Nose Hair Trimmer Face Care
+            </i>
+            <br />
+            <br />
+            <strong>
+              Specification:
+            </strong>
+            <br />
+            <ul class="list-group">
+              <li class="list-group-item">Brand: Kemei</li>
+              <li class="list-group-item">Model: KM-1000</li>
+              <li class="list-group-item">Voltage: 100-240V</li>
+              <li class="list-group-item">Power Supply: Plug-In</li>
+              <li class="list-group-item">Wireless Net Weight: 170g</li>
+              <li class="list-group-item">Time: 5 Hours</li>
+              <li class="list-group-item">Size: 6 X 9cm/2.36 X 3.54″</li>
+              <li class="list-group-item">Frequency: 50/60Hz</li>
+              <li class="list-group-item">Use Time: 60 Minutes</li>
+              <li class="list-group-item">Battery: 600mAh Nickel-Chromium Batteries</li>
+              <li class="list-group-item">
+                Function: Razor, Haircut, Face Clean, Nose Hair Trimmer
+              </li>
+              <li class="list-group-item">Clean Way: Blade Can Be Washed</li>
+              <li class="list-group-item">
+                Package Content: 1 X Electric Shaver 5 X Replacement Heads 1 X Charger
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <div
+        id="my-modal"
+        class="modal fade"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="my-modal-title"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="my-modal-title">Please fill in your details</h5>
+              <button class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <input id="fname" type="text" name="fname" placeholder="full name" reqiured />
+                <input id="phone" type="number" name="phone" placeholder="Phone no...." required />
+                <input id="phone2" type="number" name="phone2" placeholder="Alternate Phone no...."/>
+                <select id="quantity" name="quantity" id="" aria-placeholder="Quantity">
+                  <option value="1">1pc - 18,000 Naira</option>
+                  <option value="2">2pcs - 35,000 Naira</option>
+                  <option value="3">3pcs - 50,000 Naira</option>
+                </select>
+                <input id="address" type="text" name="address" placeholder="Delivery address ...." required />
+                <input id="state" type="text" name="state" placeholder="state" required />
+                <button class="btn btn-success btn-sm order-button" type="submit">Place Order</button>
+                <p class="badge">OR</p>
+                <a href="tel:08148297188" class="btn btn-dark btn-sm"
+                  >Call us <i class="fas fa-phone"></i
+                ></a>
+
+                <a
+                  class="btn wb btn-success btn-sm"
+                  href="https://api.whatsapp.com/send?phone=09082220903&text=Welcome%20client%20Please%20make%20your%20orders"
+                >
+                  <i class="fab fa-2x fa-whatsapp"></i>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="text-center">
+      <h3>Contact Us</h3>
+      <div id="contact">
+        <a href="https://web.facebook.com/winnerscircle66133/" target="_blank"><i class="fab fa-2x fa-facebook"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=09082220903&text=Welcome%20client%20Please%20make%20your%20orders"><i class="fab fa-2x fa-whatsapp"></i>09082220903</a>
+        <a href="mailto:brisbuy123@gmail.com"><i class="fas fa-2x fa-mail-bulk"></i> brisbuy123@gmail.com</a>
+      </div>
+      copyright &copy brisbuy
+    </footer>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/counter.js"></script>
+    <script src="./js/toastr.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

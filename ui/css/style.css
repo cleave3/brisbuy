@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Alfa+Slab+One|Arvo|Calistoga|Dancing+Script|Fira+Sans+Extra+Condensed&display=swap');
+
+body {
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  background-color: #e0d8ce;
+}
+.counter {
+  font-family: 'Calistoga', cursive;
+  text-align: center;
+  margin: 10px auto;
+  font-size: 2.5rem;
+  color: red;
+  font-weight: bold;
+  font-family: 'Arvo', serif;
+}
+
+.promo {
+  font-family: 'Alfa Slab One', cursive;
+}
+.navbar-brand {
+  font-family: 'Calistoga', cursive;
+  color: white !important;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.navbar-brand:hover {
+  color: #d60a0a !important;
+}
+.slider-image {
+  filter: brightness(70%);
+  width: 720px !important;
+  height: 300px;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+}
+
+.slider-image:hover {
+  filter: brightness(90%);
+}
+
+.showcase {
+  padding-top: 45px;
+  background: #000000;
+}
+
+a {
+  text-decoration: none !important;
+  color: white;
+}
+
+a:hover {
+  color: white !important;
+}
+.navbar-toggler {
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+  outline: none !important;
+}
+.navbar {
+  background-color: black !important;
+  box-shadow: 1px 1px 5px gray;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.navlinks {
+  text-align: right;
+  display: inline-block;
+  background-color: #aa0606;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  text-align: right;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none !important;
+}
+.navlinks:hover {
+  background-color: #610505;
+  color: white;
+}
+
+.toggle {
+  border: 1px solid white;
+  display: block;
+  width: 25px;
+  margin: 5px;
+}
+
+.feature-img {
+  width: 100%;
+  padding-top: 10px;
+}
+
+section {
+  padding-top: 10px;
+}
+.video {
+  background: black;
+  width: 100%;
+  height: 350px;
+}
+
+form {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+input,
+select {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  margin: 5px auto;
+  border-radius: 5px;
+  outline: 0;
+  border: 0.5px solid cadetblue;
+}
+
+option {
+  color: #000000;
+  font-style: italic;
+  font-weight: bold;
+}
+input:hover,
+input:focus,
+select:hover,
+select:focus {
+  border: 0.5px solid #0a0a0a;
+  background-color: rgb(231, 249, 250);
+}
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: black;
+  color: #fff;
+}
+#contact {
+  margin: auto;
+}
+
+#contact i {
+  margin: 10px;
+}
+
+#order {
+  margin: 10px auto;
+  max-width: 320px;
+  background-color: white;
+  padding: 10px;
+}
+
+.order-section {
+  background-color: #e0d8ce;
+}
+
+.wb {
+  border-radius: 50%;
+}
+
+.float {
+  max-width: 200px;
+  float: right;
+  clear: both;
+}
+.floating {
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+}
+.timer {
+  align-items: center;
+  font-weight: bold;
+  margin: 10px auto;
+}
+.fa-whatsapp {
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+@media (max-width: 720px) {
+  .slider-image {
+    filter: brightness(50%);
+    width: 100% !important;
+    height: 250px;
+  }
+  .video {
+    margin-top: 50px;
+  }
+
+  .navlinks {
+    text-align: center;
+    display: block;
+    margin: 1px;
+  }
+}
