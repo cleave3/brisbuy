@@ -43,21 +43,32 @@ function checkFields(data) {
 }
 
 function makeOrder(data) {
-  // if (checkFields(data)) {
-  fetch('localhost:80/order', {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json, text/plain, */*',
-      'Content-type': 'application/json'
-    },
-    body: data
-  })
-    .then((res) =>
-      toastr.success('Order successfull. We will contact you shortly to confirm your order')
-    )
-    .catch((err) => toastr.error('Order was not successfull'));
+  if (checkFields(data)) {
+    return false;
+  } else {
+    fetch('https://brisbuy.herokuapp.com/', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        fullName: fname.value,
+        address: address.value,
+        phone: phone1.value,
+        phone2: phone2.value,
+        quantity: qty.value,
+        address: address.value,
+        state: state.value,
+        amount: quantity.selectedOptions[0].innerHTML
+      })
+    })
+      .then((res) =>
+        toastr.success('Order successfull. We will contact you shortly to confirm your order')
+      )
+      .catch((err) => toastr.error('Order was not successfull'));
+  }
 }
-// }
 
 submit.addEventListener('click', (e) => {
   e.preventDefault();

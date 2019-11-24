@@ -1,6 +1,8 @@
 const sgMail = require('@sendgrid/mail');
+const dotenv = require('dotenv');
 
-sgMail.setApiKey('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');
+dotenv.config();
+sgMail.setApiKey(process.env.API_KEY);
 
 /**
  *
@@ -41,7 +43,7 @@ const sendEmail = function(data) {
     to: 'owhiroroeghele@gmail.com',
     from: '"Brisbuy" <noreply@brisbuy.com>',
     dynamic_template_data: { template },
-    templateId: 'd-03f849615b4d459b9902c574b70bc3a1'
+    templateId: process.env.TEMPLATE
   };
 
   try {
