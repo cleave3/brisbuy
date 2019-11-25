@@ -9,11 +9,11 @@ function countDown() {
     seconds = 59;
     minutes--;
     if (minutes <= 0) {
-      minutes = 0;
+      minutes = 59;
       hours--;
     }
     if (hours <= 0) {
-      hours = 8;
+      hours = 12;
       minutes = 59;
       seconds = 59;
     }
