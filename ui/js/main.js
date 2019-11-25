@@ -66,6 +66,7 @@ function makeOrder() {
       phone: phone1.value,
       phone2: phone2.value,
       address: address.value,
+      city: city.value,
       state: state.value,
       amount: quantity.selectedOptions[0].innerHTML
     })

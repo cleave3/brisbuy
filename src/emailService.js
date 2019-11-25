@@ -14,7 +14,6 @@ const sendEmail = function(data) {
   <table style="text-align: center; margin: auto; width: 100%;">
   <thead style="background-color: #880808; color: white;">
     <tr>
-      <th>Order time</th>
       <th>Name</th>
       <th>Phone No.</th>
       <th>Aiternate Phone No.</th>
@@ -24,7 +23,6 @@ const sendEmail = function(data) {
   </thead>
   <tbody>
     <tr>
-      <td>${Date.now().toLocaleString()}</td>
       <td>${data.fullName}</td>
       <td>${data.phone}</td>
       <td>${data.phone2}</td>
@@ -33,6 +31,7 @@ const sendEmail = function(data) {
     </tr>
   </tbody>
 </table>
+  <p>Order was made ${new Date().toUTCString()}</p>
 `;
 
   const message = {
