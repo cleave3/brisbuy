@@ -6,6 +6,7 @@ const phone1 = document.querySelector('#phone');
 const phone2 = document.querySelector('#phone2');
 const qty = document.querySelector('#quantity');
 const address = document.querySelector('#address');
+const city = document.querySelector('#city');
 const state = document.querySelector('#state');
 
 let errMsg = [];
@@ -18,6 +19,7 @@ function getData() {
     phone2: phone2.value,
     quantity: qty.value,
     address: address.value,
+    city: city.value,
     state: state.value,
     amount: quantity.selectedOptions[0].innerHTML
   };
@@ -28,6 +30,7 @@ function clearFields() {
   phone1.value = '';
   phone2.value = '';
   address.value = '';
+  city.value = '';
   state.value = '';
 }
 
@@ -80,5 +83,5 @@ function makeOrder() {
 
 submit.addEventListener('click', (e) => {
   e.preventDefault();
-  validate(getData());
+  checkFields(getData());
 });

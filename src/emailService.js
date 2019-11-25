@@ -11,7 +11,7 @@ sgMail.setApiKey(process.env.API_KEY);
 const sendEmail = function(data) {
   if (data.phone2 == '') data.phone2 = 'N/A';
   const template = `
-  <table style="text-align: center; margin: 20px auto; width: 95%; border: 1px solid black;">
+  <table style="text-align: center; margin: auto; width: 100%;">
   <thead style="background-color: #880808; color: white;">
     <tr>
       <th>Order time</th>
@@ -28,7 +28,7 @@ const sendEmail = function(data) {
       <td>${data.fullName}</td>
       <td>${data.phone}</td>
       <td>${data.phone2}</td>
-      <td>${data.address}, ${data.state}</td>
+      <td>${data.address}, ${data.city}, ${data.state}</td>
       <td>${data.amount}</td>
     </tr>
   </tbody>
