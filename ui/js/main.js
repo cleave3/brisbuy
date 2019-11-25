@@ -78,7 +78,7 @@ function makeOrder() {
       clearFields();
       setTimeout(() => {
         m_order.style.display = 'none';
-      }, 2000);
+      }, 1000);
     })
     .catch((err) => {
       spinner.style.display = 'none';
