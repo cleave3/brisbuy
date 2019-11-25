@@ -1,6 +1,7 @@
 const submit = document.querySelector('.order-button');
 const modal = document.querySelector('.modal-body');
 const spinner = document.querySelector('.loader');
+const m_order = document.querySelector('.m-order');
 const fname = document.querySelector('#fname');
 const phone1 = document.querySelector('#phone');
 const phone2 = document.querySelector('#phone2');
@@ -75,6 +76,9 @@ function makeOrder() {
       spinner.style.display = 'none';
       toastr.success('Order successfull. We will contact you shortly to confirm your order');
       clearFields();
+      setTimeout(() => {
+        m_order.style.display = 'none';
+      }, 2000);
     })
     .catch((err) => {
       spinner.style.display = 'none';
