@@ -16,23 +16,19 @@ const sendEmail = function(data) {
     <tr>
       <th>Order time</th>
       <th>Name</th>
-      <th>Address</th>
       <th>Phone No.</th>
       <th>Aiternate Phone No.</th>
-      <th>Product</th>
-      <th>Quantity</th>
+      <th>Address</th>
       <th>Amount</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>${Date.now()}</td>
+      <td>${Date.now().toLocaleString()}</td>
       <td>${data.fullName}</td>
       <td>${data.phone}</td>
       <td>${data.phone2}</td>
       <td>${data.address}, ${data.state}</td>
-      <td>${data.productName}</td>
-      <td>${data.quantity}</td>
       <td>${data.amount}</td>
     </tr>
   </tbody>

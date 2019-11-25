@@ -14,6 +14,10 @@ body {
   font-family: 'Arvo', serif;
 }
 
+.loader {
+  display: none;
+}
+
 .promo {
   font-family: 'Alfa Slab One', cursive;
 }

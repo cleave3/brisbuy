@@ -1,6 +1,6 @@
 const submit = document.querySelector('.order-button');
 const modal = document.querySelector('.modal-body');
-const errors = document.querySelector('.alert');
+const spinner = document.querySelector('.loader');
 const fname = document.querySelector('#fname');
 const phone1 = document.querySelector('#phone');
 const phone2 = document.querySelector('#phone2');
@@ -23,6 +23,14 @@ function getData() {
   };
 }
 
+function clearFields() {
+  fname.value = '';
+  phone1.value = '';
+  phone2.value = '';
+  address.value = '';
+  state.value = '';
+}
+
 function checkFields(data) {
   errMsg = [];
   for (field in data) {
@@ -37,41 +45,40 @@ function checkFields(data) {
   }
   errMsg && errMsg.length > 0
     ? errMsg.forEach((err) => {
-        toastr.error(err);
+        return toastr.error(err);
       })
-    : null;
+    : makeOrder();
 }
 
-function makeOrder(data) {
-  if (checkFields(data)) {
-    return false;
-  } else {
-    fetch('https://brisbuy.herokuapp.com/order', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json, text/plain, */*',
-        'Content-type': 'application/json'
-      },
-      body: JSON.stringify({
-        fullName: fname.value,
-        address: address.value,
-        phone: phone1.value,
-        phone2: phone2.value,
-        quantity: qty.value,
-        address: address.value,
-        state: state.value,
-        amount: quantity.selectedOptions[0].innerHTML
-      })
+function makeOrder() {
+  spinner.style.display = 'block';
+  fetch('https://brisbuy.herokuapp.com/order', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify({
+      fullName: fname.value,
+      phone: phone1.value,
+      phone2: phone2.value,
+      address: address.value,
+      state: state.value,
+      amount: quantity.selectedOptions[0].innerHTML
     })
-      .then((res) => {
-        console.log(res);
-        toastr.success(res.message);
-      })
-      .catch((err) => toastr.error(err.message));
-  }
+  })
+    .then((res) => {
+      spinner.style.display = 'none';
+      toastr.success('Order successfull. We will contact you shortly to confirm your order');
+      clearFields();
+    })
+    .catch((err) => {
+      spinner.style.display = 'none';
+      toastr.error('Order was not successfull');
+    });
 }
 
 submit.addEventListener('click', (e) => {
   e.preventDefault();
-  makeOrder(getData());
+  validate(getData());
 });
