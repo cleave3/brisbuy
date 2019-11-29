@@ -25,6 +25,13 @@ function getData() {
   };
 }
 
+function handleSuccess() {
+  spinner.style.display = 'none';
+  setTimeout(() => {
+    location.reload();
+  }, 3000);
+}
+
 function clearFields() {
   fname.value = '';
   phone1.value = '';
@@ -72,12 +79,12 @@ function makeOrder() {
     })
   })
     .then((res) => {
-      spinner.style.display = 'none';
+      handleSuccess();
       toastr.success('Order successfull. We will contact you shortly to confirm your order');
       clearFields();
   })
     .catch((err) => {
-      spinner.style.display = 'none';
+      handleSuccess();
       toastr.error('Order was not successfull');
     });
 }

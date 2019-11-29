@@ -35,7 +35,7 @@ const sendEmail = function(data) {
 `;
 
   const message = {
-    to: 'owhiroroeghele@gmail.com',
+    to: 'azanorbryan@gmail.com',
     from: '"Brisbuy" <noreply@brisbuy.com>',
     dynamic_template_data: { template },
     templateId: process.env.TEMPLATE
