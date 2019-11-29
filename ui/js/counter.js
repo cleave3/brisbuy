@@ -1,7 +1,4 @@
-const hrs = document.querySelector('.hours');
-const min = document.querySelector('.minutes');
-const sec = document.querySelector('.seconds');
-const cc = document.querySelector('.counter');
+const counter = document.querySelector('.counter');
 let seconds = 0;
 let minutes = 0;
 let hours = 0;
@@ -12,16 +9,16 @@ function countDown() {
     seconds = 59;
     minutes--;
     if (minutes <= 0) {
-      minutes = 0;
+      minutes = 59;
       hours--;
     }
     if (hours <= 0) {
-      hours = 8;
+      hours = 12;
       minutes = 59;
       seconds = 59;
     }
   }
-  cc.innerHTML =
+  counter.innerHTML =
     (hours ? (hours > 9 ? hours : '0' + hours) : '00') +
     ':' +
     (minutes ? (minutes > 9 ? minutes : '0' + minutes) : '00') +
