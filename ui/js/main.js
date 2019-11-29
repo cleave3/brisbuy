@@ -75,7 +75,7 @@ function makeOrder() {
       spinner.style.display = 'none';
       toastr.success('Order successfull. We will contact you shortly to confirm your order');
       clearFields();
-    })
+  })
     .catch((err) => {
       spinner.style.display = 'none';
       toastr.error('Order was not successfull');
